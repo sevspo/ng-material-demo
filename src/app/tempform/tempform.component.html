@@ -10,13 +10,23 @@
     <input type="number" id="age" name="age" [(ngModel)]="user.age" />
   </label>
   <br />
-  <h4>Aliases</h4>
-  <ng-container *ngFor="let alias of user.aliases; let i = index">
+  <h4>Friends</h4>
+  <ng-container
+    *ngFor="let friend of user.friends; let i = index"
+    ngModelGroup="friends"
+  >
     <label>
-      Alias-{{ i }}
-      <input type="text" name="name" [(ngModel)]="user.aliases[i]" />
+      Friend-{{ i }}
+      <input type="text" name="{{ i }}" [(ngModel)]="friend.name" />
     </label>
   </ng-container>
 
   <button type="submit">Submit</button>
 </form>
+
+<h4>Output</h4>
+<p>{{ user.name }} is {{ user.age }} and has friends:</p>
+<br />
+<p *ngFor="let friend of user.friends">
+  {{ friend.name }}
+</p>

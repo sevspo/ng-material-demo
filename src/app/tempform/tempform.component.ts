@@ -12,7 +12,7 @@ export class TempformComponent implements OnInit {
   user = {
     name: "severin",
     age: 38,
-    aliases: ["sevi", "seve", "sevu"]
+    friends: [{ name: "Tobi" }, { name: "Eli" }, { name: "Hans" }]
   };
 
   constructor(private http: HttpService) {}
