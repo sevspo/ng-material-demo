@@ -1,0 +1,22 @@
+<h3>Template Driven Form</h3>
+
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <label>
+    Name:
+    <input type="text" id="name" name="name" [(ngModel)]="user.name" />
+  </label>
+  <label>
+    Age:
+    <input type="number" id="age" name="age" [(ngModel)]="user.age" />
+  </label>
+  <br />
+  <h4>Aliases</h4>
+  <ng-container *ngFor="let alias of user.aliases; let i = index">
+    <label>
+      Alias-{{ i }}
+      <input type="text" name="name" [(ngModel)]="user.aliases[i]" />
+    </label>
+  </ng-container>
+
+  <button type="submit">Submit</button>
+</form>

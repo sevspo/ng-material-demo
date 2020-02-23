@@ -1,15 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { TempformComponent } from "./tempform/tempform.component";
+import { ReactformComponent } from "./reactform/reactform.component";
+import { MattempformComponent } from "./mattempform/mattempform.component";
+import { MatreactformComponent } from "./matreactform/matreactform.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TempformComponent,
+    ReactformComponent,
+    MattempformComponent,
+    MatreactformComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule
@@ -17,4 +26,4 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
