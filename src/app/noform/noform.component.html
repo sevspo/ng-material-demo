@@ -1,0 +1,24 @@
+<h3>Without a Form</h3>
+
+<input type="text" [(ngModel)]="user.name" />
+<input type="number" [(ngModel)]="user.age" />
+
+<label>
+   Email:
+   <input type="email" name="email" required email #email="ngModel" [(ngModel)]="user.email" />
+   <span *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
+</label>
+
+<div *ngFor="let friend of user.friends; let i = index">
+   <input type="text" [(ngModel)]="friend.name" />
+</div>
+
+<button type="button" (click)="onSubmit()">Submit</button>
+<button type="button" (click)="onLog()">Log</button>
+
+<h3>The Data is:</h3>
+<p>Name: {{ user.name }}</p>
+<p>Age: {{ user.age }}</p>
+<p *ngFor="let friend of user.friends">Friend: {{ friend.name }}</p>
+
+<h3>You submitted:</h3>

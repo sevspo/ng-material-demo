@@ -1,16 +1,17 @@
 <h3>Navigation</h3>
 <ul>
-  <li><a routerLink="template">Template</a></li>
-  <li><a routerLink="react">Reactive</a></li>
-  <li><a routerLink="mattemplate">Material Template</a></li>
-  <li><a routerLink="matreact">Material Reactive</a></li>
+   <li><a routerLink="template">Template</a></li>
+   <li><a routerLink="react">Reactive</a></li>
+   <li><a routerLink="mattemplate">Material Template</a></li>
+   <li><a routerLink="matreact">Material Reactive</a></li>
+   <li><a routerLink="noform">No Frorm</a></li>
 </ul>
 
 <h3>List of Users</h3>
 <ul>
-  <li *ngFor="let user of users">
-    <h4>{{ user.name }}</h4>
-  </li>
+   <li *ngFor="let user of users">
+      <h4>{{ user.name }}</h4>
+   </li>
 </ul>
 
 <router-outlet></router-outlet>

@@ -1,32 +1,29 @@
 <h3>Template Driven Form</h3>
 
 <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-  <label>
-    Name:
-    <input type="text" id="name" name="name" [(ngModel)]="user.name" />
-  </label>
-  <label>
-    Age:
-    <input type="number" id="age" name="age" [(ngModel)]="user.age" />
-  </label>
-  <br />
-  <h4>Friends</h4>
-  <ng-container
-    *ngFor="let friend of user.friends; let i = index"
-    ngModelGroup="friends"
-  >
-    <label>
-      Friend-{{ i }}
-      <input type="text" name="{{ i }}" [(ngModel)]="friend.name" />
-    </label>
-  </ng-container>
+   <label>
+      Name:
+      <input type="text" id="name" name="name" [(ngModel)]="user.name" />
+   </label>
+   <label>
+      Age:
+      <input type="number" id="age" name="age" [(ngModel)]="user.age" />
+   </label>
+   <br />
+   <h4>Friends</h4>
+   <ng-container *ngFor="let friend of user.friends; let i = index" ngModelGroup="friends">
+      <label>
+         Friend-{{ i }}
+         <input type="text" name="{{ i }}" [(ngModel)]="friend.name" />
+      </label>
+   </ng-container>
 
-  <button type="submit">Submit</button>
+   <button type="submit">Submit</button>
 </form>
 
 <h4>Output</h4>
 <p>{{ user.name }} is {{ user.age }} and has friends:</p>
 <br />
 <p *ngFor="let friend of user.friends">
-  {{ friend.name }}
+   {{ friend.name }}
 </p>

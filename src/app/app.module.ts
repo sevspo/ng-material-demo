@@ -8,6 +8,7 @@ import { TempformComponent } from "./tempform/tempform.component";
 import { ReactformComponent } from "./reactform/reactform.component";
 import { MattempformComponent } from "./mattempform/mattempform.component";
 import { MatreactformComponent } from "./matreactform/matreactform.component";
+import { NoformComponent } from './noform/noform.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MatreactformComponent } from "./matreactform/matreactform.component";
     TempformComponent,
     ReactformComponent,
     MattempformComponent,
-    MatreactformComponent
+    MatreactformComponent,
+    NoformComponent
   ],
   imports: [
     FormsModule,

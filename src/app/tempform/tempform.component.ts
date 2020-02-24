@@ -3,23 +3,23 @@ import { User } from "../user";
 import { HttpService } from "../http.service";
 
 @Component({
-  selector: "app-tempform",
-  templateUrl: "./tempform.component.html",
-  styleUrls: ["./tempform.component.scss"]
+   selector: "app-tempform",
+   templateUrl: "./tempform.component.html",
+   styleUrls: ["./tempform.component.scss"]
 })
 export class TempformComponent implements OnInit {
-  //user: User;
-  user = {
-    name: "severin",
-    age: 38,
-    friends: [{ name: "Tobi" }, { name: "Eli" }, { name: "Hans" }]
-  };
+   //user: User;
+   user = {
+      name: "severin",
+      age: 38,
+      friends: [{ name: "Tobi" }, { name: "Eli" }, { name: "Hans" }]
+   };
 
-  constructor(private http: HttpService) {}
+   constructor(private http: HttpService) {}
 
-  ngOnInit(): void {}
+   ngOnInit(): void {}
 
-  onSubmit(f) {
-    console.log(f.value);
-  }
+   onSubmit(f) {
+      console.log(f.value);
+   }
 }
