@@ -11,14 +11,18 @@
    </label>
    <br />
    <h4>Friends</h4>
-   <ng-container *ngFor="let friend of user.friends; let i = index" ngModelGroup="friends">
-      <label>
-         Friend-{{ i }}
-         <input type="text" name="{{ i }}" [(ngModel)]="friend.name" />
-      </label>
-   </ng-container>
+   <div>
+      <ng-container *ngFor="let friend of user.friends; let i = index" ngModelGroup="friends">
+         <label>
+            Friend-{{ i }}
+            <input type="text" name="{{ i }}" [(ngModel)]="friend.name" />
+         </label>
+      </ng-container>
+   </div>
+   <button type="button" (click)="onNewField()">NewField</button>
 
    <button type="submit">Submit</button>
+   <button type="button" (click)="onLog()">log</button>
 </form>
 
 <h4>Output</h4>
