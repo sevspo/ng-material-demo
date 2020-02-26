@@ -20,7 +20,7 @@ export class TempformComponent implements OnInit {
       ]
    };
 
-   constructor(private http: HttpService) {}
+   constructor() {}
 
    ngOnInit(): void {}
 

@@ -8,24 +8,20 @@ import { TempformComponent } from "./tempform/tempform.component";
 import { ReactformComponent } from "./reactform/reactform.component";
 import { MattempformComponent } from "./mattempform/mattempform.component";
 import { MatreactformComponent } from "./matreactform/matreactform.component";
-import { NoformComponent } from './noform/noform.component';
+import { NoformComponent } from "./noform/noform.component";
+import { MatInputModule } from "@angular/material/input";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TempformComponent,
-    ReactformComponent,
-    MattempformComponent,
-    MatreactformComponent,
-    NoformComponent
-  ],
-  imports: [
-    FormsModule,
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      TempformComponent,
+      ReactformComponent,
+      MattempformComponent,
+      MatreactformComponent,
+      NoformComponent
+   ],
+   imports: [FormsModule, MatInputModule, BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+   providers: [],
+   bootstrap: [AppComponent]
 })
 export class AppModule {}
